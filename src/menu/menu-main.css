@@ -1,0 +1,27 @@
+.menu-rowfirst {
+  margin: 5px;
+  padding: 5px;
+}
+
+.menu-row {
+  margin: 5px 10px 5px 5px;
+  padding: 5px;
+}
+
+.status {
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 5px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-weight: italic;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 5px;
+  text-align: left;
+  color: #666
+}
