@@ -7,6 +7,7 @@ import MenuBoard from "./menu/MenuBoard"
 import LoginForm from "./input/LoginForm"
 
 export class App extends Component {
+
   render (){
     return (
       <div className="App">

@@ -1,17 +1,18 @@
 import React, {Component} from "react"
 import "./menu-main.css"
 
-export default class MenuItem extends Component {
-
-    render(){
+export default function MenuItem(props) {
+            
         return (
-            <div className="square">
-                <h4>{this.props.title}</h4>
-                <ul>
-                    <li>{this.props.subtitle}</li>
-                    <li>{this.props.description}</li>
-                </ul>
+            <div className="single-banner" onClick={()=>props.listenChoiceMenu(props.menu)}>
+                <a href="#">
+                    <img src={props.menu.icon} class="img-menu"></img>
+                    <div class="single-banner--cta">
+                    <h4 class="cta-title"><a href="#">
+                    <p>{props.menu.text}</p></a></h4>
+                    <a href="#" class="btn-explore-more">Explore more</a>
+                    </div>
+                </a>                        
             </div>
         );
-    }
 }

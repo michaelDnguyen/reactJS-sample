@@ -6,6 +6,9 @@
 .menu-row {
   margin: 5px 10px 5px 5px;
   padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .status {
@@ -23,5 +26,50 @@
   margin-top: -1px;
   padding: 5px;
   text-align: left;
-  color: #666
+  color: #666;
+}
+
+.img-menu{
+  width:390px;
+  height:260px;
+}
+
+.div{
+  display: block;
+}
+
+.single-banner {
+  position: relative;
+}
+
+.single-banner--cta {
+  bottom: -12px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 8;
+  max-width: 90%;
+  width: auto;
+  left: 35px;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+}
+
+.cta-title{
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+}
+
+.btn-explore-more {
+  background: #ef4b4f;
+  color: #fff;
+  padding: 6px 14px;
+  line-height: 1.5;
+  opacity: 0;
+  display: inline-block;
+  visibility: hidden;
+  width: auto;
+  border-radius: 2px;
 }

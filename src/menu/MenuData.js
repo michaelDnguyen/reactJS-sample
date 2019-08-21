@@ -2,31 +2,19 @@ const menuData = [
     {
         id: 1,
         text: "Lập hồ sơ bảo hiểm",
-        icon: "http://cdn.onlinewebfonts.com/svg/img_29364.png",
+        icon: "https://tuvan-baohiemnhantho.com/wp-content/uploads/2017/06/ky-hop-dong-tham-gia-bao-hiem-nhan-tho.jpg",
         completed: false
     },
     {
         id: 2,
         text: "Khách hàng tiềm năng",
-        icon: "http://cdn.onlinewebfonts.com/svg/img_29364.png",
+        icon: "http://baohagiang.vn/dataimages/201903/original/images1436308_IMG_4512.JPG",
         completed: false
     },
     {
         id: 3,
         text: "Bảng minh họa",
-        icon: "http://cdn.onlinewebfonts.com/svg/img_29364.png",
-        completed: false
-    },
-    {
-        id: 4,
-        text: "Kế hoạch mẫu",
-        icon: "http://cdn.onlinewebfonts.com/svg/img_29364.png",
-        completed: false
-    },
-    {
-        id: 5,
-        text: "Cấu hình",
-        icon: "http://cdn.onlinewebfonts.com/svg/img_29364.png",
+        icon: "https://cdnmedia.baotintuc.vn/2017/08/25/16/36/van-phong-giao-dich.jpg",
         completed: false
     }
 ]
