@@ -4,7 +4,7 @@ body {
   vertical-align: baseline;
   color: #323232;
   font-size: 16px;
-  max-width: 60%;
+  max-width: fit-content;
   background: #fff;
   line-height: 1em;
   margin-left: auto;
@@ -15,7 +15,8 @@ body {
 .App {
   display: block;
   background: lavender;
-  margin: 15px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 15px;
   border: 0;
   vertical-align: baseline;

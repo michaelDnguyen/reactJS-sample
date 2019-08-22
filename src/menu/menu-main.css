@@ -34,6 +34,16 @@
   height: 260px;
 }
 
+.img-menu:hover {
+  width: 400px;
+  height: 270px;
+  display: inline-block;
+  background-color: lightslategray;
+  opacity: 0.5;
+  background: #999;
+  transition: 0.5s;
+}
+
 .div {
   display: inline-flex;
 }
@@ -45,7 +55,7 @@
   box-shadow: #999;
 }
 
-.single-banner--cta {
+.single-banner-cta {
   bottom: -12px;
   cursor: pointer;
   position: absolute;
@@ -53,17 +63,10 @@
   max-width: 90%;
   width: auto;
   left: 35px;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
 }
 
 .cta-title {
   color: antiquewhite;
-  -webkit-transition: all 0.5s ease-in;
-  -moz-transition: all 0.5s ease-in;
-  -o-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
 }
 
 .btn-explore-more {

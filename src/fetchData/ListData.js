@@ -11,36 +11,29 @@ class ListData extends Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://my-json-server.typicode.com/michaelDnguyen/MyRestAPI/users")
       .then(res => {
-        console.log("Data load: " + res.json);
-        return res.json;
+        return res.json();
       })
-      .then(res => {
+      .then(result => {
+        console.log(result);
         this.setState({
-
-          users: res,
+          users: result,
           loading: false
         });
-        console.log("Data load: " + this.state.users);
+        console.log("Data state: " + this.state.users);
       })
       .catch(console.log);
   }
 
   render() {
-    const { userList } = this.state.users.map((user, index) => (
-      <div key={index} className="card">
+    const userList = this.state.users.map((user, index) => (
+      <div key={index} className="card" >
         <div className="card-body">
-          <h5>{user.username}</h5>
-          <h6>{user.name}</h6>
-          <h6>{user.email}</h6>
-          <h6>
-            {user.address.suite +
-              " " +
-              user.address.street +
-              " " +
-              user.address.city}
-          </h6>
+          <h5>Username: {user.username}</h5>
+          <h6>FullName: {user.name}</h6>
+          <h6>Email: {user.email}</h6>
+          <h6>Phone: {user.phone}</h6>
         </div>
       </div>
     ));

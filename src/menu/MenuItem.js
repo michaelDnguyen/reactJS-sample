@@ -8,14 +8,14 @@ export default function MenuItem(props) {
       onClick={() => props.listenChoiceMenu(props.menu)}
     >
       <a href="#">
-        <img src={props.menu.icon} class="img-menu" />
-        <div class="single-banner--cta">
-          <h4 class="cta-title">
+        <img src={props.menu.icon} className="img-menu" />
+        <div className="single-banner-cta">
+          <h4 className="cta-title">
             <p>
               <strong>{props.menu.text}</strong>
             </p>
           </h4>
-          <a href="#" class="btn-explore-more">
+          <a href="#" className="btn-explore-more">
             Explore more
           </a>
         </div>
