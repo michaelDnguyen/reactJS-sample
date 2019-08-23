@@ -9,14 +9,14 @@ import { createStore, applyMiddleware } from "redux";
 //thêm provider comp của react-redux
 import { Provider } from "react-redux";
 //đọc reducer
-import reducer from "./reducer";
+import reducer from "./reducer/reducer";
 
 const store = createStore(reducer);
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  // <Provider store={store}>
+  <App />,
+  // </Provider>
   document.getElementById("root")
 );
 

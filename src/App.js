@@ -2,48 +2,27 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import TodoList from "./todolist/TodoList";
-import MenuBoard from "./menu/MenuBoard";
-import LoginForm from "./input/LoginForm";
-import ListData from "./fetchData/ListData";
+import { Route, Link, BrowserRouter } from "react-router-dom";
 
-import { connect } from "react-redux";
-import { load } from "./comment";
+import Navigate from "./setting/Navigate";
+import Router from "./setting/Router";
 
-//connect decorator
-@connect(
-  state => ({
-    //trả về kết quả đã nhận bằng reducer vào props
-    comments: state.comment.comments
-  }),
-  //chỉ định action
-  { load }
-)
-export default class App extends Component {
-  componentWillMount() {
-    //kick action của comment
-    this.props.load;
-  }
-
+class App extends Component {
   render() {
-    //state đã lấy được bằng connect sẽ ở trong props
-    const { comments } = this.props;
-    //lần đầu null được trả về, sau khi xử lý thì kết quả được trả về
-    console.load(comments);
-
     return (
       <div className="App">
-        <div>{this.comments}</div>
-        <header className="App-header">
+        {/* <div>{comments}</div> */}
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-        </header>
+        </header> */}
 
-        <div className="menu-main">
-          <MenuBoard />
-        </div>
-        <LoginForm />
-        <ListData />
+        <BrowserRouter>
+          <Navigate />
+          <Router />
+        </BrowserRouter>
       </div>
     );
   }
 }
+
+export default App;
