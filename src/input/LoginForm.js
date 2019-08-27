@@ -20,12 +20,18 @@ export default class LoginForm extends Component {
   };
 
   mySubmit = () => {
-    alert("Just input " + this.state.email + " -- " + this.state.password);
+    const { email, password, isRemember } = this.state;
+    if(email === "admin@mail.com" && password === "admin"){
+    localStorage.setItem("isRemember", isRemember);
+    localStorage.setItem("email", isRemember ? email : "");
+    localStorage.setItem("password",isRemember?password:"");
+    localStorage.setItem("isLogin", "true");
+    }
   };
 
   render() {
     return (
-      <Form className="form-login">
+      <Form className="form-login" onSubmit={this.mySubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email hoặc mã số</Form.Label>
           <Form.Control
@@ -63,7 +69,6 @@ export default class LoginForm extends Component {
           className="button-primary"
           variant="primary"
           type="submit"
-          onClick={this.mySubmit}
         >
           Đăng nhập
         </Button>

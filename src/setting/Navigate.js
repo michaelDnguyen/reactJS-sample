@@ -24,25 +24,22 @@ export default class Navigate extends Component {
   };
 
   render() {
-    const styleBar = {
-        color: #fff,
-    };
 
     return (
       <div>
         <nav className="menuBar">
           <div className="logo">
             <NavLink className="navbar navbar-light bg-danger" to="/">
-              <p style={styleBar}>Trang chủ</p>
+              <p>Trang chủ</p>
             </NavLink>
           </div>
-          <div className="rightMenu">
+          {/* <div className="rightMenu">
             <RightMenu />
-          </div>
+          </div> */}
           <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
             <span className="barsBtn" />
           </Button>
-          <Drawer
+          {/* <Drawer
             title="Basic Drawer"
             placement="right"
             closable={false}
@@ -50,7 +47,7 @@ export default class Navigate extends Component {
             visible={this.state.visible}
           >
             <RightMenu />
-          </Drawer>
+          </Drawer> */}
         </nav>
       </div>
     );

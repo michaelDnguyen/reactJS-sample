@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Switch, Route, withRouter } from "react-router-dom";
-import CONST from "../constant/contasnt";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
+import * as CONST from "../constant/contasnt";
 
 import NotFound from "./NotFound";
 import LoginForm from "../input/LoginForm";
@@ -8,6 +8,21 @@ import ListData from "../fetchData/ListData";
 import MenuBoard from "../menu/MenuBoard";
 
 class Router extends Component {
+  state = {
+    isLogin: localStorage.getItem("isLogin") | ""
+  };
+
+  handleLogin = withRouter(({ history }) => {
+    console.log("vo ham handle Login");
+
+    if (this.state.isLogin) <Redirect to={CONST.PATH_HOME} />;
+    else <Redirect to={CONST.PATH_LOGIN} />;
+  });
+
+  componentWillMount() {
+    this.handleLogin();
+  }
+
   render() {
     return (
       <Switch>
